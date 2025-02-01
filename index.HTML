@@ -456,9 +456,9 @@
                     <div class="custom-select">
                         <select id="city" class="form-control" required>
                             <option value="">اختر المدينة</option>
-                            <option value="جدة">جدة</option>
-                            <option value="الرياض">الرياض</option>
-                            <option value="مكة">مكة</option>
+                            <option value="كفر الزريات">كفر الزريات</option>
+                            <option value="شبين الكوم">شبين الكوم</option>
+                            <option value="عامه الشعب">عامه الشعب</option>
                         </select>
                     </div>
                 </div>
@@ -614,12 +614,12 @@
                 const city = document.getElementById('city').value;
                 const isStudent = document.getElementById('isStudent').value;
 
-                if (city === 'جدة' && isStudent === 'نعم') {
+                if (city === 'كفر الزريات' && isStudent === 'نعم') {
                     // تخزين بيانات المستخدم في localStorage
                     localStorage.setItem('user', JSON.stringify({ city, isStudent }));
                     showNotification('تم التسجيل بنجاح!', 'success');
                 } else {
-                    showNotification('الخصومات متاحة فقط للطلاب المقيمين في جدة.', 'error');
+                    showNotification('الخصومات متاحة فقط للطلاب المقيمين في كفر الزريات.', 'error');
                     return;
                 }
             } else {
@@ -632,8 +632,8 @@
         function showCoupons(category) {
             const user = JSON.parse(localStorage.getItem('user'));
 
-            if (!user || user.city !== 'جدة' || user.isStudent !== 'نعم') {
-                showNotification('الخصومات متاحة فقط للطلاب المقيمين في جدة.', 'error');
+            if (!user || user.city !== 'كفر الزريات' || user.isStudent !== 'نعم') {
+                showNotification('الخصومات متاحة فقط للطلاب المقيمين في كفر الزريات.', 'error');
                 return;
             }
 
