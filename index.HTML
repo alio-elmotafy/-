@@ -456,7 +456,7 @@
                     <div class="custom-select">
                         <select id="city" class="form-control" required>
                             <option value="">اختر المدينة</option>
-                            <option value="كفر الزريات">كفر الزريات</option>
+                            <option value="كفر الزيات">كفر الزيات</option>
                             <option value="شبين الكوم">شبين الكوم</option>
                             <option value="عامه الشعب">عامه الشعب</option>
                         </select>
@@ -614,12 +614,12 @@
                 const city = document.getElementById('city').value;
                 const isStudent = document.getElementById('isStudent').value;
 
-                if (city === 'كفر الزريات' && isStudent === 'نعم') {
+                if (city === 'كفر الزيات' && isStudent === 'نعم') {
                     // تخزين بيانات المستخدم في localStorage
                     localStorage.setItem('user', JSON.stringify({ city, isStudent }));
                     showNotification('تم التسجيل بنجاح!', 'success');
                 } else {
-                    showNotification('الخصومات متاحة فقط للطلاب المقيمين في كفر الزريات.', 'error');
+                    showNotification('الخصومات متاحة فقط للطلاب المقيمين في كفر الزيات.', 'error');
                     return;
                 }
             } else {
@@ -632,8 +632,8 @@
         function showCoupons(category) {
             const user = JSON.parse(localStorage.getItem('user'));
 
-            if (!user || user.city !== 'كفر الزريات' || user.isStudent !== 'نعم') {
-                showNotification('الخصومات متاحة فقط للطلاب المقيمين في كفر الزريات.', 'error');
+            if (!user || user.city !== 'كفر الزيات' || user.isStudent !== 'نعم') {
+                showNotification('الخصومات متاحة فقط للطلاب المقيمين في كفر الزيات.', 'error');
                 return;
             }
 
